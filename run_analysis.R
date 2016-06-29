@@ -15,3 +15,11 @@ th_rf <- file.path("UCI HAR Dataset")
 files<-list.files(path_rf, recursive=TRUE)
 files
 
+## Read data from the files into the variables
+
+## Read the Activity files
+
+dataActivityTest  <- read.table(file.path(path_rf, "test" , "Y_test.txt" ),header = FALSE)
+dataActivityTrain <- read.table(file.path(path_rf, "train", "Y_train.txt"),header = FALSE)
+
+

@@ -11,7 +11,7 @@ unzip(zipfile="Dataset.zip")
 ## unzipped files are in the folder "UCI HAR Dataset"
 
 ##  Get the list of the files
-th_rf <- file.path("UCI HAR Dataset")
+path_rf <- file.path("UCI HAR Dataset")
 files<-list.files(path_rf, recursive=TRUE)
 files
 
@@ -23,3 +23,7 @@ dataActivityTest  <- read.table(file.path(path_rf, "test" , "Y_test.txt" ),heade
 dataActivityTrain <- read.table(file.path(path_rf, "train", "Y_train.txt"),header = FALSE)
 
 
+## Read the Subject files
+
+dataSubjectTrain <- read.table(file.path(path_rf, "train", "subject_train.txt"),header = FALSE)
+dataSubjectTest  <- read.table(file.path(path_rf, "test" , "subject_test.txt"),header = FALSE)
